@@ -69,7 +69,7 @@ setup(
     ],
     entry_points='''
         [console_scripts]
-        myhello=hello:cli
+        hello=hello:cli
     ''',
 )
 ```
