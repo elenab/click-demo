@@ -27,7 +27,7 @@ To the best of the developer’s knowledge, Click is the first Python library th
 - supports file handling out of the box
 - comes with useful common helpers (getting terminal dimensions, ANSI colors, fetching direct keyboard input, screen clearing, finding config paths, launching apps and editors, etc.)
 
-###Click aims to support fully composable command line user interfaces by doing the following:
+### Click aims to support fully composable command line user interfaces by doing the following:
 - Click does not just parse, it also dispatches to the appropriate code.
 - Click has a strong concept of an invocation context that allows subcommands to respond to data from the parent command.
 - Click has strong information available for all parameters and commands so that it can generate unified help pages for the full CLI and to assist the user in converting the input data as necessary.
@@ -35,7 +35,7 @@ To the best of the developer’s knowledge, Click is the first Python library th
 - Click has enough meta information available for its whole program that it can evolve over time to improve the user experience without forcing developers to adjust their programs. For instance, if Click decides to change how help pages are formatted, all Click programs will automatically benefit from this.
 
 
-##Installation
+## Installation
 It is highly recommended using a virtualenv.
 When writing command line utilities, it’s recommended to write them as modules that are distributed with setuptools instead of using Unix shebangs.
 
@@ -79,7 +79,7 @@ The magic is in the _entry_points_ parameter. Below _console_scripts_, each line
 That’s it.
 
 
-###Testing The Script
+### Testing The Script
 To test the script, you can make a new virtualenv and then install your package:
 
 ```
@@ -141,7 +141,7 @@ Usage: greet [OPTIONS] [OUT]
 Error: Invalid value for "--repeat": aaaq is not a valid integer
 ```
 
-##Callback Invocation
+## Callback Invocation
 For a regular command, the callback is executed whenever the command runs. If the script is the only command, it will always fire (unless a parameter callback prevents it. This for instance happens if someone passes --help to the script).
 
 For groups, the situation looks different. In this case, the callback fires whenever a subcommand fires (unless this behavior is changed). What this means in practice is that an outer command runs when an inner command runs:
@@ -184,7 +184,7 @@ def greet(config, string, repeat, out):
 ```click.group``` decorator works exactly as the ```click.command```, the difference is that any group can have subcommands.
 It is a very useful concept for building complex application.
 
-###Other Click features:
+### Other Click features:
  - Values from Environment Variables
  - Range Options
  - Choice Options
@@ -205,7 +205,7 @@ It is a very useful concept for building complex application.
  - [Click repo in github](https://github.com/pallets/click)
  - [Click Advanced Patterns](http://click.pocoo.org/5/advanced/)
  - [Testing Click Aplications](http://click.pocoo.org/5/testing/)
- - [Clicl Api Reference](http://click.pocoo.org/5/api/)
+ - [Click Api Reference](http://click.pocoo.org/5/api/)
  - [Setuptools Integration](http://click.pocoo.org/5/setuptools/#setuptools-integration)
  - [Virtualenv and pip Basics](http://jonathanchu.is/posts/virtualenv-and-pip-basics/)
   
